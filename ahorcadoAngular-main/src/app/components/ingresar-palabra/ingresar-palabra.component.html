@@ -1,0 +1,34 @@
+<form class="formulario">
+<h3>Adivina la palabra!!</h3>
+
+<div class="card text-white bg-secondary mb-3" style="max-width: 35rem;">
+  <img [src]="imagenSrc()" class="card-img-top" height="200px">
+  <div class="card-body">
+    <h5 class="card-title">{{arrCoincidencias | json}}</h5>
+  </div>
+</div>
+
+<form class="formulario">
+  <div *ngIf="input">
+    <label>   
+      Ingresa una letra...
+    </label> 
+    <br>
+    <input type="text" [(ngModel)]="letra" [ngModelOptions]="{standalone: true}" (keyup)="revisarPalabra()" />
+    <br><br>
+  </div>
+
+  <div *ngIf="juegoTerminado" class="alerta-loser" role="alert">
+    ¡¡¡Perdiste!!! - La palabra era: "{{palabraAdivinar}}"
+  </div>
+  <div *ngIf="juegoGanado" class="alerta-sangrante" role="alert">
+    ¡¡¡Ganaste!!! - Felicidades, la palabra era: "{{palabraAdivinar}}"
+  </div>
+
+  <label>
+    Ya ingresaste {{intentos | json}}
+  </label>
+</form>
+
+
+</form>

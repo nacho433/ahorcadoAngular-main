@@ -1,0 +1,32 @@
+<form class="formulario">
+
+<h3>Agregar Palabras Nuevas</h3>
+
+<form>
+  <label>
+    Ingresa una nueva palabra
+  </label>
+  <br>
+<input type="text" [(ngModel)]="palabraNueva" [ngModelOptions]="{standalone: true}"  />
+<br><br>
+<button (click)="AgregarPalabra()" type="button" class="btn btn-primary me-2" > Agregar</button>
+</form>
+
+<br><br>
+<div *ngIf="alertOk" class="alert alert-success" role="alert">
+  Palabra Agregada!
+</div>
+
+<div *ngIf="alertErr" class="alert alert-danger" role="alert">
+  Ups!.. Ocurrió un error!
+</div>
+
+<label class="fondo">
+  Palabras Disponibles en BD
+  <p>
+    {{arrPalabras | json}}
+  </p>
+</label>
+
+
+</form>

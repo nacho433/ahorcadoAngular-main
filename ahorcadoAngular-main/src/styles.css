@@ -1,0 +1,96 @@
+body{
+    background-image: url("src/assets/images/fondo.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.fondoGrape{
+     background-color: #D7EAED !important;;
+}
+
+.tituloJuego{
+    text-align: center; 
+    color: white; 
+    font-family: 'MuseoModerno', cursive;
+    animation: mover 2s linear infinite;
+
+}
+@keyframes mover {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(100px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+.label{
+    text-align: center; color: white; font-family: 'MuseoModerno', cursive;
+}
+.boton {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.formulario {
+    background-color: #333333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    max-width: 400px; /* Ajusta el valor según tus necesidades */
+    margin: 0 auto; /* Centra el formulario horizontalmente */
+}
+.container{
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px !important;
+    border-radius: 30px;
+}
+.alerta-sangrante {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    font-size: 18px;
+    background-color: green;
+    color: white;
+  }
+  
+
+  @keyframes sangrar {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-5px);
+    }
+  }
+
+  .alerta-loser {
+    background-color: #ff0000;
+    color: #ffffff;
+    padding: 5px;
+    text-align: center;
+    font-weight: bold;
+  }
+  .div-contenedor {
+    position: relative;
+  }
+  .imagen-centrada {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80%;
+  }

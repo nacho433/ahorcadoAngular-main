@@ -1,0 +1,25 @@
+<h1 class="tituloJuego">Juego del Ahorcado</h1>
+  <div class="container">
+  <app-ingresar-palabra *ngIf="componenteJugar"></app-ingresar-palabra>
+  <br>
+  <app-agregar-palabra *ngIf="componenteAgregar"></app-agregar-palabra>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+</div>
+<div class="d-grid gap-2 col-6 mx-auto">
+  <button (click)="reiniciarPagina()" class="boton">Volver a Jugar</button>
+  <button (click)="agregarPalabras()" class="boton" *ngIf="componenteJugar" type="button">Agregar Palabras Nuevas</button>
+  <button (click)="regresarJuego()" class="boton" *ngIf="componenteAgregar" type="button">Regresar al Juego</button>
+</div>
+
+<br>
+  <br>
+  <br>
+  <br>
